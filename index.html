@@ -12,20 +12,19 @@
     <div id="app">
         <div class="container">
             <div class="input-group mt-5 mx-auto">
-                <input type="text" class="form-control" placeholder="" name="equipaggiamento" id="equipaggiamento" v-model="testo">
-                <button @click="inserisci" @keyup.enter="inserisci()" class="btn btn-outline-secondary" type="button" id="button-addon2">Invia</button>
+                <input type="text" class="form-control" placeholder="" name="equipment" id="equipment" v-model="text">
+                <button @click="addItem()" @keyup.enter="addItem()" class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
             </div>
             <div class="options">
-                <ul v-if="listaAttrezzatura.length > 0">
-                    <li v-for="(item, index) in listaAttrezzatura" :key="index">
+                <ul v-if="equipmentList.length > 0">
+                    <li v-for="(item, index) in equipmentList" :key="index">
                         <div class="d-grid gap-2 d-md-block">
                             <span>{{item.name}}</span>
-                            <button @click="cancella(index)" class="btn btn-primary mx-3" type="button">Cancella</button>
-                            <button class="btn btn-primary" type="button">Fatto</button>
+                            <button @click="deleteItem(index)" class="btn btn-primary mx-3" type="button">Cancel</button>
                         </div>
                     </li>
                 </ul>
-                <h3 v-else>La lista è vuota!</h3>
+                <h3 v-else>The list is empty!</h3>
             </div>      
         </div>
     </div>

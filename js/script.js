@@ -19,7 +19,7 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
-            listaAttrezzatura: [
+            equipmentList: [
                 {
                     name: 'Abbigliamento da trekking itinerante a strati comodo'
                 },
@@ -51,15 +51,16 @@ createApp({
                     name: 'Bastoncini telescopici'
                 }
             ],
-            testo: ''
+            text: ''
         }
     },
     methods: {
-        inserisci() {
-            this.listaAttrezzatura.push(this.testo)
+        addItem() {
+            this.equipmentList.push(this.text)
         },
-        cancella(index) {
-            this.listaAttrezzatura.splice(index, 1)
+        deleteItem(index) {
+            this.equipmentList.splice(index, 1),
+            this.text = ''
         }
     }
 }).mount('#app');
