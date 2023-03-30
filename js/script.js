@@ -71,6 +71,9 @@ createApp({
         deleteItem(index) {
             this.equipmentList.splice(index, 1),
             this.text = ''
+        },
+        complete(index) {
+            this.equipmentList[index].done = true
         }
     }
 }).mount('#app');
