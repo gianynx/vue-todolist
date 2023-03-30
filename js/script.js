@@ -21,34 +21,44 @@ createApp({
         return {
             equipmentList: [
                 {
-                    name: 'Abbigliamento da trekking itinerante a strati comodo'
+                    name: 'Abbigliamento da trekking itinerante a strati comodo',
+                    done: true
                 },
                 {
-                    name: 'Scarpe da trekking con suola scolpita antiscivolo'
+                    name: 'Scarpe da trekking con suola scolpita antiscivolo',
+                    done: true
                 },
                 {
-                    name: 'Giacca antivento/impermeabile'
+                    name: 'Giacca antivento/impermeabile',
+                    done: true
                 },
                 {
-                    name: 'Cappello e guanti'
+                    name: 'Cappello e guanti',
+                    done: true
                 },
                 {
-                    name: 'Zaino adatto a camminare'
+                    name: 'Zaino adatto a camminare',
+                    done: true
                 },
                 {
-                    name: 'Torcia frontale'
+                    name: 'Torcia frontale',
+                    done: true
                 },
                 {
-                    name: 'Borracce'
+                    name: 'Borracce',
+                    done: true
                 },
                 {
-                    name: 'Integratori alimentari'
+                    name: 'Integratori alimentari',
+                    done: true
                 },
                 {
-                    name: 'Sacchetto rifiuti'
+                    name: 'Sacchetto rifiuti',
+                    done: true
                 },
                 {
-                    name: 'Bastoncini telescopici'
+                    name: 'Bastoncini telescopici',
+                    done: true
                 }
             ],
             text: ''

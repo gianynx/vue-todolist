@@ -17,7 +17,7 @@
             </div>
             <div class="options">
                 <ul v-if="equipmentList.length > 0">
-                    <li v-for="(item, index) in equipmentList" :key="index">
+                    <li :class="done == true? 'done' : '' " v-for="(item, index) in equipmentList" :key="index">
                         <div class="d-grid gap-2 d-md-block">
                             <span>{{item.name}}</span>
                             <button @click="deleteItem(index)" class="btn btn-primary mx-3" type="button">Cancel</button>
