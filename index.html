@@ -20,7 +20,7 @@
                     <li @click="complete(index)" :class="item.done == true? 'done' : 'grabbing'" v-for="(item, index) in equipmentList" :key="index">
                         <div class="option">
                             <span>{{item.name}}</span>
-                            <button @click="deleteItem(index)" class="btn btn-primary mx-3" type="button">Cancel</button>
+                            <button @click.stop="deleteItem(index)" class="btn btn-primary mx-3" type="button">Cancel</button>
                         </div>
                     </li>
                 </ul>
