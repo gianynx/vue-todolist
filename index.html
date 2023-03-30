@@ -12,13 +12,13 @@
     <div id="app">
         <div class="container">
             <div class="input-group mt-5 mx-auto">
-                <input type="text" class="form-control" placeholder="enter here" name="equipment" id="equipment" v-model="text">
-                <button @click="addItem()" @keyup.enter="addItem()" class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+                <input type="text" class="form-control" placeholder="enter here" name="equipment" id="equipment" v-model="text" @keyup.enter="addItem()">
+                <button @click="addItem()" class="btn btn-outline-secondary" type="button">Send</button>
             </div>
             <div class="options">
                 <ul v-if="equipmentList.length > 0">
-                    <li @click="complete(index)" :class="item.done == true? 'done' : '' " v-for="(item, index) in equipmentList" :key="index">
-                        <div class="">
+                    <li @click="complete(index)" :class="item.done == true? 'done' : 'grabbing'" v-for="(item, index) in equipmentList" :key="index">
+                        <div class="option">
                             <span>{{item.name}}</span>
                             <button @click="deleteItem(index)" class="btn btn-primary mx-3" type="button">Cancel</button>
                         </div>

@@ -22,58 +22,62 @@ createApp({
             equipmentList: [
                 {
                     name: 'Abbigliamento da trekking itinerante a strati comodo',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Scarpe da trekking con suola scolpita antiscivolo',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Giacca antivento/impermeabile',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Cappello e guanti',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Zaino adatto a camminare',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Torcia frontale',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Borracce',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Integratori alimentari',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Sacchetto rifiuti',
-                    done: true
+                    done: false
                 },
                 {
                     name: 'Bastoncini telescopici',
-                    done: true
+                    done: false
                 }
             ],
             text: ''
-        }
+        };
     },
     methods: {
         addItem() {
-            this.equipmentList.push(this.text)
+            const newItem = {
+                name: this.text,
+                done: false
+            }
+            this.equipmentList.push(newItem);
         },
         deleteItem(index) {
             this.equipmentList.splice(index, 1),
-            this.text = ''
+            this.text = '';
         },
         complete(index) {
-            this.equipmentList[index].done = true
+            this.equipmentList[index].done = true;
         }
     }
 }).mount('#app');
