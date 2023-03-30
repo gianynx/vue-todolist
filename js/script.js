@@ -14,3 +14,52 @@ Bonus:
 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 */
+
+const {createApp} = Vue;
+createApp({
+    data() {
+        return {
+            listaAttrezzatura: [
+                {
+                    name: 'Abbigliamento da trekking itinerante a strati comodo'
+                },
+                {
+                    name: 'Scarpe da trekking con suola scolpita antiscivolo'
+                },
+                {
+                    name: 'Giacca antivento/impermeabile'
+                },
+                {
+                    name: 'Cappello e guanti'
+                },
+                {
+                    name: 'Zaino adatto a camminare'
+                },
+                {
+                    name: 'Torcia frontale'
+                },
+                {
+                    name: 'Borracce'
+                },
+                {
+                    name: 'Integratori alimentari'
+                },
+                {
+                    name: 'Sacchetto rifiuti'
+                },
+                {
+                    name: 'Bastoncini telescopici'
+                }
+            ],
+            testo: ''
+        }
+    },
+    methods: {
+        inserisci() {
+            this.listaAttrezzatura.push(this.testo)
+        },
+        cancella(index) {
+            this.listaAttrezzatura.splice(index, 1)
+        }
+    }
+}).mount('#app');

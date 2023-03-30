@@ -1,0 +1,17 @@
+.container {
+    width: 1200px;
+    height: 100vh;
+}
+
+.options {
+    padding-top: 2rem;
+    padding-left: 30rem;
+}
+
+.input-group {
+    width: 30%;
+}
+
+.grid {
+    border: 1px solid;
+}
