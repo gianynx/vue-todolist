@@ -1,15 +1,64 @@
+/*****************************************************
+CSS GENERAL
+*****************************************************/
+
+:root {
+    --primary_color: #ffffff;
+    --btn_color: #f4d100;
+    --btn_hover: #a9bf00;
+}
+
+/*****************************************************
+CSS UTILITIES
+*****************************************************/
+
+.grid {
+    border: 1px solid;
+}
+
+/*****************************************************
+CSS "Vue To Do List"
+*****************************************************/
+
+body {
+    background-image: url("../img/braies.jpg");
+    background-size: cover;
+    font-family: 'Libre Baskerville', serif;
+}
+
 .container {
-    width: 1200px;
-    height: 100vh;
+    width: 700px;
+    margin-top: 30px;
+    padding: 85px 75px;
+    border-radius: 15px;
+    background-color: rgba(7, 7, 7, 0.5);
+}
+
+h1, h2, h3, h4, li {
+    color: var(--primary_color);
 }
 
 .options {
-    padding-top: 2rem;
-    padding-left: 30rem;
+    width: 80%;
+    padding-top: 3.5rem;
+}
+
+.fa-solid {
+    font-size: 15px;
+    color: var(--primary_color);
+}
+
+.btn {
+    background-color: var(--btn_color);
+    font-size: 9px;
+}
+
+.btn:hover {
+    background-color: var(--btn_hover);
 }
 
 .input-group {
-    width: 30%;
+    width: 80%;
 }
 
 .done {
@@ -19,4 +68,8 @@
 
 .grabbing {
     cursor: grabbing;
+}
+
+.fa-person-hiking {
+    font-size: 50px;
 }

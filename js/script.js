@@ -21,14 +21,6 @@ createApp({
         return {
             equipmentList: [
                 {
-                    name: 'Abbigliamento da trekking itinerante a strati comodo',
-                    done: false
-                },
-                {
-                    name: 'Scarpe da trekking con suola scolpita antiscivolo',
-                    done: false
-                },
-                {
                     name: 'Giacca antivento/impermeabile',
                     done: false
                 },
@@ -58,6 +50,10 @@ createApp({
                 },
                 {
                     name: 'Bastoncini telescopici',
+                    done: false
+                },
+                {
+                    name: 'Scarpe da trekking con suola antiscivolo',
                     done: false
                 }
             ],

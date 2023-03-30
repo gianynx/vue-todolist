@@ -6,26 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Vue To Do List</title>
 </head>
 <body>
     <div id="app">
-        <div class="container">
-            <div class="input-group mt-5 mx-auto">
-                <input type="text" class="form-control" placeholder="enter here" name="equipment" id="equipment" v-model="text" @keyup.enter="addItem()">
-                <button @click="addItem()" class="btn btn-outline-secondary" type="button">Send</button>
-            </div>
-            <div class="options">
-                <ul v-if="equipmentList.length > 0">
-                    <li @click="complete(index)" :class="item.done == true? 'done' : 'grabbing'" v-for="(item, index) in equipmentList" :key="index">
-                        <div class="option">
-                            <span>{{item.name}}</span>
-                            <button @click.stop="deleteItem(index)" class="btn btn-primary mx-3" type="button">Cancel</button>
+        <div class="container pt-5 mb-5">
+            <h1 class="text-center">Summer Adventures 2023</h1>
+            <h4 class="text-center pt-2">Attrezzatura minima obbligatoria</h4>
+            <div class="options mx-auto">
+                <ul class="list-unstyled px-4" v-if="equipmentList.length > 0">
+                    <li class="small" @click="complete(index)" :class="item.done == true? 'done' : 'grabbing'" v-for="(item, index) in equipmentList" :key="index">
+                        <div class="option p-1">
+                            <span><i class="fa-solid fa-chevron-right px-3"></i>{{item.name}}</span>
+                            <button @click.stop="deleteItem(index)" class="btn mx-3 p-1" type="button">cancel</button>
                         </div>
                     </li>
                 </ul>
-                <h3 v-else>The list is empty!</h3>
-            </div>      
+                <h3 class="text-center" v-else>Your list is empty!</h3>
+            </div>
+            <div class="input-group pt-5 mx-auto">
+                <input type="text" class="form-control" placeholder="enter here your missing equipment" name="equipment" id="equipment" v-model="text" @keyup.enter="addItem()">
+                <button @click="addItem()" class="btn btn-outline-secondary" type="button">send</button>
+            </div>
+            <h2 class="text-center pt-5" v-if="equipmentList.length > 0">Are you ready?</h2>
+            <div class="text-center pt-5">
+                <i class="fa-solid fa-person-hiking fa-beat"></i>
+            </div>
         </div>
     </div>
     
