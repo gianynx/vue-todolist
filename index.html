@@ -22,7 +22,7 @@
             <div class="options mx-auto">
                 <ul class="list-unstyled px-4" v-if="equipmentList.length > 0">
                     <li class="small" @click="complete(index)" :class="item.done == true? 'done' : 'grabbing'" v-for="(item, index) in equipmentList" :key="index">
-                        <div class="option p-1">
+                        <div class="option p-1 d-flex flex-row justify-content-between">
                             <span><i class="fa-solid fa-chevron-right px-3"></i>{{item.name}}</span>
                             <button @click.stop="deleteItem(index)" class="btn mx-3 p-1" type="button">cancel</button>
                         </div>
